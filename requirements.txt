@@ -1,0 +1,4 @@
+flask
+flask_admin
+flask_sqlalchemy
+requests
