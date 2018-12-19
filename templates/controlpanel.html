@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="static/css/nice-select.css" />
+        <link rel="stylesheet" href="static/css/app.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="static/image/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="static/image/favicon.ico" />
+        <script type="text/javascript" src="static/js/jquery.js"></script>
+        <script type="text/javascript" src="static/js/jquery.nice-select.js"></script>
+        <title>Telegram Bot Control Panel</title>
+    </head>
+    <body>
+        <div class="container">
+            <noscript>
+                <div class="block warning-block">
+                    <b>Warning:</b> You will not be able to use this site
+                    without JavaScript. Please, enable it or switch to another
+                    browser.
+                </div>
+            </noscript>
+            <div class="block select-block">
+                <select class="select" id="bot_id" name="bot_id">
+                    <option disabled selected>Choose Bot</option>
+                    {% for bot in bots %}
+                        <option value="{{ bot.id }}">{{ bot.name }}</option>
+                    {% endfor %}
+                </select>
+                <select class="select" id="user_id" name="user_id">
+                    <option disabled selected>Choose User</option>
+                    {% for user in users %}
+                        <option value="{{ user.uid }}">{{ user.name }}</option>
+                    {% endfor %}
+                </select>
+                <button class="button float-right theme-button" id="theme-button">
+                    <span>Switch theme</span>
+                </button>
+                <div class="clear-both"></div>
+            </div>
+            <div class="block message-block">
+                <textarea class="message" id="message" name="message"></textarea>
+            </div>
+            <div class="block status-block">
+                <div class="status">
+                    <b>Status: </b>
+                    <span id="status-out">idle</span>
+                </div>
+                <button class="button" id="send" type="submit">
+                    <span>Send</span>
+                </button>
+            </div>
+        </div>
+        <script type="text/javascript" src="static/js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400');
+
+::-moz-selection {
+    background: #f3f4f7;
+}
+
+::selection {
+    background: #f3f4f7;
+}
+
+.no-transition * {
+    -webkit-transition: 0s all !important;
+    -moz-transition: 0s all !important;
+    -ms-transition: 0s all !important;
+    -o-transition: 0s all !important;
+    transition: 0s all !important;
+}
+
+.button {
+    background-color: #fff;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    -webkit-cursor: pointer;
+    cursor: pointer;
+    -webkit-display: block;
+    display: block;
+    float: left;
+    height: 42px;
+    line-height: 40px;
+    max-width: 100%;
+    -moz-outline: 0;
+    outline: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+button span, input[type='reset'] span, input[type='submit'] span {
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+body, .message {
+    margin: 0;
+    padding: 0;
+}
+
+body, textarea, .button {
+    font: 14px 'Work Sans',Helvetica,Arial,Vesans-serif;
+}
+
+body, textarea {
+    border: 0;
+    -moz-outline: 0;
+    outline: 0;
+}
+
+.select, .message-block, .status-block, .warning-block, .theme-button {
+    margin: 0 5px;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f0f0f0;
+}
+
+textarea {
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 100px;
+    overflow: hidden;
+    padding: 10px;
+    vertical-align: top;
+    -webkit-transition: .2s background-color ease-in-out;
+    -moz-transition: .2s background-color ease-in-out;
+    -ms-transition: .2s background-color ease-in-out;
+    -o-transition: .2s background-color ease-in-out;
+    transition: .2s background-color ease-in-out;
+}
+
+textarea:focus {
+    background: #ffffff;
+}
+
+.block {
+    padding: 10px 0;
+}
+
+.container {
+    margin: 40px auto;
+    max-width: 500px;
+    min-width: 160px;
+    padding: 0 10px;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.float-right {
+    float: right;
+}
+
+[dir='rtl'] .float-right {
+    float: left;
+}
+
+.message {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    -moz-resize: vertical;
+    resize: vertical;
+    width: 100%;
+}
+
+.select, .button {
+    -webkit-transition: 0s all;
+    -moz-transition: 0s all;
+    -ms-transition: 0s all;
+    -o-transition: 0s all;
+    transition: 0s all;
+}
+
+[dir='rtl'] .button, [dir='rtl'] .nice-select {
+    float: right;
+}
+
+.nice-select .current {
+    -webkit-display: block;
+    display: block;
+    overflow: hidden;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.status-block {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-display: flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.status {
+    padding: 7px 10px;
+}
+
+.warning-block {
+    color: #8b0000;
+}
+
+.theme-button {
+    height: 42px;
+}
+
+body.dark-theme {
+    background: #202020;
+    color: #f0f0f0;
+}
+
+.dark-theme ::-moz-selection {
+    background: #202020;
+}
+
+.dark-theme ::selection {
+    background: #202020;
+}
+
+.dark-theme textarea, .dark-theme textarea:focus, .dark-theme .nice-select,
+.dark-theme .nice-select .list, .dark-theme .button {
+    background: #272727;
+    color: #f0f0f0;
+    border-color: #1e1e1e;
+}
+
+.dark-theme .nice-select .option.selected,
+.dark-theme .nice-select .option.focus,
+.dark-theme .nice-select .option:hover {
+    background: #303030;
+}
+
+.dark-theme textarea {
+    background: #1d1d1d;
+    border-color: #1d1d1d;
+}
+
+@media (max-width: 520px) {
+    .nice-select .list {
+        width: 100%;
+    }
+
+    .select, .theme-button {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .select-block {
+        margin: 0 5px;
+        padding: 5px 0;
+    }
+}
