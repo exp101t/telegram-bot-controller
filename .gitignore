@@ -1,0 +1,5 @@
+bots.db
+__pycache__/
+config.py
+*.swp
+trash/
