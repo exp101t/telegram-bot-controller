@@ -1,4 +1,4 @@
-from classes import app, Bot, User, LoginForm
+from classes import app, Bot, Chat, User, LoginForm
 from config import PROXY_IP, PROXY_PORT, SALT
 
 from flask import render_template, request, jsonify, redirect
@@ -19,7 +19,7 @@ def login_required(func):
 @app.route('/')
 @login_required
 def index():
-    return render_template('controlpanel.html', bots = Bot.query.all(), users = User.query.all())
+    return render_template('controlpanel.html', bots = Bot.query.all(), users = Chat.query.all())
 
 @app.route('/send', methods = ['POST'])
 @login_required
@@ -35,7 +35,7 @@ def send_message():
         proxy_dict = {'https': 'https://%s:%s' % (PROXY_IP, PROXY_PORT)}
         
         bot_token = Bot.query.filter_by(id = bot_id).one().token
-        user_id   = User.query.filter_by(uid = user_id).one().id
+        user_id   = Chat.query.filter_by(uid = user_id).one().id
 
         requests.get(API_URL % (bot_token, user_id, text), proxies = proxy_dict)
         return jsonify({'successful':  True}), 200
