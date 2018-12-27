@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Telegram Bot Controller :: Admin Panel</title>
+        <link rel="stylesheet" href="static/css/loginpage.css">
+    </head>
+    <body>
+        <div class="pen-title"></div>
+        <div class="module form-module">
+            <div class="toggle"></div>
+            <div class="form">
+                <h2>Login to your account</h2>
+                <form method = "POST">
+                    {{ form.hidden_tag() }}
+                    {{ form.username(placeholder = 'Username') }}
+                    {{ form.password(placeholder = 'Password') }}
+                    <button>Login</button>
+                </form>
+                <span id="error">{{ error }}</span>
+            </div>
+        </div>
+    </body>
+</html>

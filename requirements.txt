@@ -1,4 +1,6 @@
 flask
 flask_admin
+flask_login
 flask_sqlalchemy
+flask-wtf
 requests
