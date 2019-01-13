@@ -35,3 +35,4 @@ If you don't want to use proxy, you can just delete `proxies` parameter in `requ
 - [X] Create login page
 - [ ] Attachments for messages
 - [ ] Add logout button and link to admin page
+- [ ] Add multiuser system
