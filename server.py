@@ -29,7 +29,7 @@ def send_message():
         bot_id  = int(request.form.get('bot_id', 0))
         text    = request.form.get('text', '')
     except:
-        return jsonify({'successful': False, 'reason': 'Incorrect user or bot ID'}), 400
+        return jsonify({'successful': False, 'reason': 'Incorrect user or bot ID'}), 200
     
     try:
         proxy_dict = {'https': 'https://%s:%s' % (PROXY_IP, PROXY_PORT)}
@@ -40,7 +40,7 @@ def send_message():
         requests.get(API_URL % (bot_token, user_id, text), proxies = proxy_dict)
         return jsonify({'successful':  True}), 200
     except:
-        return jsonify({'successful': False, 'reason': 'Proxy is unavailable or bot or user ID is incorrect'}), 400
+        return jsonify({'successful': False, 'reason': 'Proxy is unavailable or bot or user ID is incorrect'}), 200
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():

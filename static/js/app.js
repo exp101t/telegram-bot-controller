@@ -20,7 +20,7 @@ function getCookie(key) {
 $('#send').click(function (event) {
     event = event || window.event;
 
-    $('#status-out').html('sending...');
+    $('#status-out').html('Sending...');
 
     var request = $.ajax({
         data: {
@@ -35,11 +35,11 @@ $('#send').click(function (event) {
     });
 
     request.done(function (response) {
-        $('#status-out').html(response.successful ? 'successful' : 'failed');
+        $('#status-out').html(response.successful ? 'Successful' : response.reason);
     });
 
     request.fail(function (jqueryXHR, textStatus) {
-        $('#status-out').html('failed');
+        $('#status-out').html('Unknown error');
     });
 });
 
