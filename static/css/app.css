@@ -49,6 +49,7 @@ button span, input[type='reset'] span, input[type='submit'] span {
 body, .message {
     margin: 0;
     padding: 0;
+    height: 350px;
 }
 
 body, textarea, .button {
@@ -61,7 +62,7 @@ body, textarea {
     outline: 0;
 }
 
-.select, .message-block, .status-block, .warning-block, .theme-button {
+.select, .message-block, .status-block, .warning-block, #theme-button, #admin-link, #logout-button{
     margin: 0 5px;
 }
 
@@ -98,7 +99,7 @@ textarea:focus {
 
 .container {
     margin: 40px auto;
-    max-width: 500px;
+    max-width: 700px;
     min-width: 160px;
     padding: 0 10px;
 }

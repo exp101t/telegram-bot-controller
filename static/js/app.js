@@ -55,3 +55,11 @@ $('#theme-button').click(function (event) {
         $('body').removeClass('no-transition');
     }, 100);
 });
+
+$('#logout-button').click(function (event) {
+    location.href = 'logout';
+});
+
+$('#admin-link').click(function (event) {
+    location.href = 'admin';
+});

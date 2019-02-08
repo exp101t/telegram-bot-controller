@@ -4,6 +4,7 @@ Firstly, `config.py` must contain something like this:
 ```
 from classes import app
 
+USE_PROXY  = True
 PROXY_IP   = '1.2.3.4'
 PROXY_PORT = 4321
 
@@ -30,9 +31,9 @@ $ python3 server.py
 import os
 os.urandom(32)
 ```
-If you don't want to use proxy, you can just delete `proxies` parameter in `requests.get` call in `server.py`. 
 ## To Do
 - [X] Create login page
 - [ ] Attachments for messages
-- [ ] Add logout button and link to admin page
+- [X] Add logout button and link to admin page
 - [ ] Add multiuser system
+- [ ] Chat with people through a bot
