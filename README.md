@@ -37,3 +37,4 @@ os.urandom(32)
 - [X] Add logout button and link to admin page
 - [ ] Add multiuser system
 - [ ] Chat with people through a bot
+- [ ] Rewrite templates with Bootstrap
