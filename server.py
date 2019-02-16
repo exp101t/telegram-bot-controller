@@ -37,8 +37,6 @@ def index():
 @app.route('/send', methods = ['POST'])
 @login_required
 def send_message():
-    print(request.files)
-
     try:
         user_id = int(request.form.get('user_id', 0))
         bot_id  = int(request.form.get('bot_id', 0))
